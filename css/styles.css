@@ -31,6 +31,9 @@
   --job-img-overlay-bg-color: rgba(47, 48, 58, 0.8);
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
   --hero-button-hover-color: #188ce8;
+  --form-border-color: rgba(33, 33, 33, 0.2);
+  --textaria-text-color: rgba(117, 117, 117, 0.5);
+  --modal-form-btn-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 body {
@@ -816,5 +819,117 @@ img {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+.modal-form {
+  padding: 40px;
+}
+
+.modal-form-field {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: var(--secondary-text-color);
+  margin-bottom: 10px;
+}
+
+.modal-form-head {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--form-border-color);
+  border-radius: 4px;
+  padding-left: 42px;
+  transition: border-color 250ms var(--cubic);
+  margin-top: 4px;
+}
+
+.modal-form-message {
+  width: 100%;
+  height: 120px;
+  margin-top: 4px;
+  border: 1px solid var(--form-border-color);
+  border-radius: 4px;
+  padding: 12px 16px;
+  resize: none;
+  transition: background-color 250ms var(--cubic);
+}
+
+.modal-form-message::placeholder {
+  color: var(--textaria-text-color);
+}
+
+.modal-form-message:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.modal-form-checkbox:checked + .modal-form-checkbox-label::before {
+  background-color: var(--accent-color);
+  box-shadow: inset 0 0 0 4px #ffffff;
+}
+
+.modal-form-checkbox:focus + .modal-form-checkbox-label::before {
+  outline: 2px solid rgba(0, 0, 255, 0.5);
+}
+
+.modal-form-checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+
+  color: var(--secondary-text-color);
+  margin-bottom: 20px;
+}
+
+.modal-form-label-link {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--accent-color);
+}
+
+.modal-form-checkbox-label::before {
+  display: block;
+  content: '';
+  width: 18px;
+  height: 18px;
+  border: 1px solid #303030;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.modal-form-btn {
+  display: inline-block;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: var(--title-text-color);
+  background-color: var(--accent-color);
+
+  box-shadow: var(--modal-form-btn-shadow);
+  border-radius: 4px;
+  padding: 10px 56px;
 }
 /*=============End Modal=============*/
