@@ -816,8 +816,8 @@ img {
   transition: fill 250ms var(--cubic);
 }
 
-.close-vector:focus,
-.close-vector:hover {
+.close-btn:focus .close-vector,
+.close-btn:hover .close-vector {
   fill: var(--accent-color);
 }
 
@@ -868,6 +868,11 @@ img {
   border-color: var(--accent-color);
 }
 
+.modal-form-input:hover + .form-input-icon,
+.modal-form-input:focus + .form-input-icon {
+  fill: var(--accent-color);
+}
+
 .modal-form-input-wrapper {
   position: relative;
 }
@@ -879,6 +884,8 @@ img {
   left: 12px;
   height: 18px;
   width: 18px;
+  fill: var(--primary-color);
+  transition: fill 250ms var(--cubic);
 }
 
 .form-input-icon:hover,
@@ -976,5 +983,15 @@ img {
   border-radius: 4px;
   cursor: pointer;
   padding: 10px 56px;
+  border: none;
+  outline: none;
+
+  transition: background-color 250ms var(--cubic), box-shadow 250ms var(--cubic);
+}
+
+.modal-form-btn:hover,
+.modal-form-btn:focus {
+  background-color: var(--hero-button-hover-color);
+  box-shadow: var(--modal-form-btn-shadow);
 }
 /*=============End Modal=============*/
