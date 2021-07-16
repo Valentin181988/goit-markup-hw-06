@@ -1000,15 +1000,6 @@ img {
   margin-bottom: 30px;
 }
 
-.modal-form-label-link {
-  position: relative;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-
-  color: var(--accent-color);
-}
-
 .modal-form-checkbox:checked + .modal-form-checkbox-label::before {
   background-image: url('../images/check.svg');
 }
@@ -1025,11 +1016,20 @@ img {
 
 /*--чекбокс--*/
 
+.modal-form-label-link {
+  position: relative;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--accent-color);
+}
+
 .modal-form-label-link::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: 5px;
+  bottom: 6px;
 
   display: block;
   width: 100%;
