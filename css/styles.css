@@ -170,7 +170,6 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   transition: color 250ms var(--cubic);
-  outline: none;
 }
 
 .menu-link:visited {
@@ -306,7 +305,6 @@ img {
   padding-top: 10px;
   padding-bottom: 10px;
   border: none;
-  outline: none;
 
   transition: background-color 1000ms var(--cubic), box-shadow 250ms var(--cubic);
 }
@@ -546,7 +544,6 @@ img {
   border: 1px solid var(--social-links);
   border-radius: 4px;
   transition: border 250ms var(--cubic);
-  outline: none;
 }
 
 .clients-links-icons {
@@ -586,7 +583,6 @@ img {
 
   color: var(--title-text-color);
   transition: color 250ms var(--cubic);
-  outline: none;
 }
 
 .adress-list-link:not(:last-child) {
@@ -609,7 +605,6 @@ img {
 
 .social-link {
   background-color: var(--social-links-bg-f);
-  outline: none;
 }
 
 .social-link-icon.f-link-color {
@@ -639,7 +634,9 @@ img {
 }
 
 .footer-form-btn {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -652,18 +649,13 @@ img {
   border-radius: 4px;
   border: none;
   padding: 10px 29px;
-  padding-right: 62px;
   cursor: pointer;
   margin-left: 12px;
 }
 
 .send-icon {
-  position: absolute;
   height: 24px;
   width: 24px;
-  top: 50%;
-  left: 148px;
-  transform: translateY(-50%);
 }
 
 .footer-form-input {
@@ -674,7 +666,6 @@ img {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: transparent;
-  outline: none;
   color: var(--title-text-color);
   padding-left: 16px;
 }
@@ -727,7 +718,6 @@ img {
   line-height: 1.63;
   text-align: center;
   letter-spacing: 0.03em;
-  outline: none;
 
   background-color: var(--widgets-link-background-color);
   border-radius: 4px;
@@ -825,7 +815,6 @@ img {
 .projects-links {
   display: block;
   transition: box-shadow 250ms var(--cubic);
-  outline: none;
 }
 
 .projects-links:hover,
@@ -859,6 +848,7 @@ img {
   border-radius: 4px;
 
   transform: translate(-50%, -50%);
+  padding: 40px;
 }
 
 .close-btn {
@@ -893,10 +883,6 @@ img {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-}
-
-.modal-form {
-  padding: 40px;
 }
 
 .modal-form-field {
@@ -936,7 +922,6 @@ img {
 
 .modal-form-input:hover,
 .modal-form-input:focus {
-  outline: none;
   border-color: var(--accent-color);
 }
 
@@ -982,7 +967,6 @@ img {
 
 .modal-form-message:hover,
 .modal-form-message:focus {
-  outline: none;
   border-color: var(--accent-color);
 }
 
@@ -1002,6 +986,7 @@ img {
 
 .modal-form-checkbox:checked + .modal-form-checkbox-label::before {
   background-image: url('../images/check.svg');
+  border: none;
 }
 
 .modal-form-checkbox-label::before {
@@ -1009,9 +994,15 @@ img {
   content: '';
   width: 16px;
   height: 15px;
-  background-image: url('../images/checkbox.svg');
+  border: 2px solid var(--primary-color);
+  border-radius: 2px;
   cursor: pointer;
   margin-right: 10px;
+}
+
+.modal-form-checkbox-label::before:hover,
+.modal-form-checkbox-label::before:focus {
+  outline: 3px solid #188ce8;
 }
 
 /*--чекбокс--*/
@@ -1055,7 +1046,6 @@ img {
   cursor: pointer;
   padding: 10px 56px;
   border: none;
-  outline: none;
 
   transition: background-color 250ms var(--cubic), box-shadow 250ms var(--cubic);
 }
