@@ -987,6 +987,9 @@ img {
 .modal-form-checkbox:checked + .modal-form-checkbox-label::before {
   background-image: url('../images/check.svg');
   border: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .modal-form-checkbox-label::before {
